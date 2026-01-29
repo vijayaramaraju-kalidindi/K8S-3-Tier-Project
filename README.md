@@ -34,11 +34,12 @@ Client (Postman / Browser)
 ## 📂 Repository Structure
 ```text
 .
-├── server.js
-├── package.json
 ├── Dockerfile
+├── package.json
+├── server.js
 ├── k8s/
 │ ├── namespace.yaml
+│ ├── mongosecret.yaml
 │ ├── mongo-deployment.yaml
 │ ├── mongo-service.yaml
 │ ├── app-deployment.yaml
@@ -46,7 +47,6 @@ Client (Postman / Browser)
 │ └── ingressroute.yaml
 └── README.md
 ```
-
 ---
 
 ## 🚀 Application Features
@@ -87,6 +87,7 @@ Push the image to docker hub and reuse it in the nodejs deployment yaml file.
 Create Namespace
 ```text
 kubectl apply -f k8s/namespace.yaml
+kubectl apply -f k8s/mongosecret.yaml
 ```
 Deploy MongoDB
 ```text
