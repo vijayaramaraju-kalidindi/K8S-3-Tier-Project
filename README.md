@@ -82,10 +82,7 @@ Build Docker Image
 ```text
 docker build -t avengers-api:v1 .
 ```
-Run Locally
-```text
-docker run -p 3000:3000 avengers-api:v1
-```
+Push the image to docker hub and reuse it in the nodejs deployment yaml file.
 ### ☸️ Kubernetes Deployment
 Create Namespace
 ```text
